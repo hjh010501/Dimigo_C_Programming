@@ -1029,21 +1029,84 @@
 //    SwapIntPtr(&ptr1, &ptr2);
 //    printf("*ptr1, *ptr2: %d %d \n", *ptr1, *ptr2);
 //}
+//
+//#include <stdio.h>
+
+//int main() {
+//    int num1 = 10, num2 = 20, num3 = 30;
+//    int *ptr1 = &num1;
+//    int *ptr2 = &num2;
+//    int *ptr3 = &num3;
+//
+//    int *ptrArr[] = {ptr1, ptr2, ptr3};
+//    int **dptr = ptrArr;
+//
+//    printf("%d %d %d \n", *(ptrArr[0]), *(ptrArr[1]), *(ptrArr[2]));
+//    printf("%d %d %d \n", *(dptr[0]), *(dptr[1]), *(dptr[2]));
+//
+//}
+
+// 2017.10.26(목)_프로그래밍
+// void 포인터형은 어떠한 주소값이든 넣을 수 있다.
+//#include <stdio.h>
+//
+//int main() {
+//
+//    int num1 = 10, num2 = 20, num3 = 30, num4 = 40;
+//    int arr2d[2][4] = {1,2,3,4,5,6,7,8};
+//    int i, j;
+//
+//    int * whoA[4] = {&num1, &num2, &num3, &num4};
+//    int(*whoB)[4] = arr2d;
+//
+//    printf("%d %d %d %d \n", *whoA[0],*whoA[1],*whoA[2],*whoA[3]);
+//
+//    for(i=0; i < 2; i++) {
+//        for(j=0; j < 4; j++) {
+//            printf("%d ", whoB[i][j]);
+//            printf("\n");
+//        }
+//    }
+//    return 0;
+//}
+
+//#include <stdio.h>
+//
+//void SimpleAdder(int n1, int n2) {
+//    printf("%d + %d = %d\n", n1, n2, n1+n2);
+//}
+//
+//void ShowString(char * str) {
+//    printf("%s \n", str);
+//}
+//
+//int main() {
+//    char * str = "Function Pointer";
+//    int num1 = 10, num2 = 20;
+//
+//    void (*fptr1)(int, int) = SimpleAdder;
+//    void (*fptr2)(char *) = ShowString;
+//
+//    fptr1(num1, num2);
+//    fptr2(str);
+//
+//}
 
 #include <stdio.h>
 
+void SoSimpleFunc(void) {
+    printf("I'm so simple");
+}
+
 int main() {
-    int num1 = 10, num2 = 20, num3 = 30;
-    int *ptr1 = &num1;
-    int *ptr2 = &num2;
-    int *ptr3 = &num3;
+    int num = 20;
+    void * ptr;
     
-    int *ptrArr[] = {ptr1, ptr2, ptr3};
-    int **dptr = ptrArr;
+    ptr = &num;
+    printf("%p \n", ptr);
     
-    printf("%d %d %d \n", *(ptrArr[0]), *(ptrArr[1]), *(ptrArr[2]));
-    printf("%d %d %d \n", *(dptr[0]), *(dptr[1]), *(dptr[2]));
-    
+    ptr = SoSimpleFunc;
+    printf("%p \n", ptr);
 }
 //int main() {
 //    int a = 10, b = 3;
