@@ -817,7 +817,6 @@
  */
 
 
-//
 //int main() {
 //    int x = 10;
 //    int* pnData;
@@ -883,7 +882,7 @@
 // char str1[] = "My String" 에서 [] 는 널문자('\0') 때문에 10 입력되어짐.
 // char * str = "test" 에서 str 이 가르키는 주소값은 t 를 가리키는 주소값과 같다.
 // * 를 사용하여 선언한 포인터 배열, 문자열은 주소값 수정이 가능하다, 단 하나씩 값을 바꾸는것은 불가능하다.
-
+//
 //#include <stdio.h>
 //
 //int main() {
@@ -1091,28 +1090,82 @@
 //    fptr2(str);
 //
 //}
+//
+//#include <stdio.h>
+//
+//void SoSimpleFunc(void) {
+//    printf("I'm so simple");
+//}
+//
+//int main() {
+//    int num = 20;
+//    void * ptr;
+//
+//    ptr = &num;
+//    printf("%p \n", ptr);
+//
+//    ptr = SoSimpleFunc;
+//    printf("%p \n", ptr);
+//}
 
-#include <stdio.h>
+// 2017.11.2(목)_프로그래밍
+// 운영체제에게 전달하는 역활을 하는게 스트림
+// EOF (End of File) 은 파일의 값을 표현하기 위해서 정리해 둠. 윈도우는 컨트롤 Z 맥은 컨트롤 D 임.
+// fputs 는 개행 X, puts 는 개행 O
 
-void SoSimpleFunc(void) {
-    printf("I'm so simple");
-}
+//int main() {
+//    int ch;
+//    while (1) {
+//        ch = getchar();
+//        if(ch == EOF) {
+//            break;
+//        }
+//        putchar(ch);
+//    }
+//    return 0;
+//}
 
-int main() {
-    int num = 20;
-    void * ptr;
-    
-    ptr = &num;
-    printf("%p \n", ptr);
-    
-    ptr = SoSimpleFunc;
-    printf("%p \n", ptr);
-}
+//int main() {
+//    char * str = "Simple String";
+//
+//    printf("1. puts test ------\n");
+//    puts(str);
+//    puts("So Simple String");
+//
+//    printf("2. fputs test ----- \n");
+//    fputs(str, stdout); printf("\n");
+//    fputs("So Simple String", stdout); printf("\n");
+//    printf("3. end of main ----- \n" );
+//    return 0;
+//}
+
+//void ClearLineFormReadBuffer(void) {
+//    while(getchar() != "\n");
+//}
+//
+//int main() {
+//    char perID[7];
+//    char name[10];
+//    
+//    fputs("주민번호 앞 6자리 입력: ", stdout);
+//    fgets(perID, sizeof(perID), stdin);
+//    ClearLineFormReadBuffer();
+//    
+//    fputs("이름 입력: ", stdout);
+//    fgets(name, sizeof(name), stdin);
+//    
+//    printf("주민번호: %s\n", perID);
+//    printf("이름: %s\n", name);
+//}
+
+
+//---------
 //int main() {
 //    int a = 10, b = 3;
 //    printf("%d %d\n", a--, --a);
 //    printf("%d %d\n", ++b, b++);
 //    return 0;
 //}
+
 
 
