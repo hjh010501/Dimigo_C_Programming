@@ -290,7 +290,7 @@
  else
  nSelect = 20;
  
- (/*nSelect = input <= 10 ? 10 : 20 ;)
+ (nSelect = input <= 10 ? 10 : 20 ;)
  
  printf("%d\n", nSelect);
  }*/
@@ -1142,22 +1142,71 @@
 //void ClearLineFormReadBuffer(void) {
 //    while(getchar() != "\n");
 //}
-//
+////
+// 2017.11.3(금)_프로그래밍
 //int main() {
 //    char perID[7];
 //    char name[10];
-//    
-//    fputs("주민번호 앞 6자리 입력: ", stdout);
-//    fgets(perID, sizeof(perID), stdin);
+//
+//    fputs("주민번호 앞 6자리 입력: ");
+//    fgets(perID, sizeof(perID));
 //    ClearLineFormReadBuffer();
-//    
-//    fputs("이름 입력: ", stdout);
-//    fgets(name, sizeof(name), stdin);
-//    
+//
+//    fputs("이름 입력: ");
+//    fgets(name, sizeof(name));
+//
 //    printf("주민번호: %s\n", perID);
 //    printf("이름: %s\n", name);
 //}
 
+
+//#include <string.h>
+//
+//void RemoveBSN(char str[]) {
+//    int len = strlen(str);
+//    str[len - 1] = 0;
+//}
+//
+//int main() {
+//    char str[100];
+//    printf("문자열 입력: ");
+//    fgets(str,sizeof(str));
+//    printf("길이: %d, 내용 : %s", strlen(str), str);
+//
+//    RemoveBCN(str);
+//
+//    printf("길이: %d, 내용: %s \n", strlen(str), str);
+//}
+//int main() {
+//    char str1[20] = "1234567890";
+//    char str2[20];
+//    char str3[5];
+//
+//    strcpy(str2, str1);
+//    puts(str2);
+//
+//    strncpy(str3, str1, sizeof(str3));
+//    puts(str3);
+//
+//    strncpy(str3, str1, sizeof(str3) - 1);
+//    str3[sizeof(str3) - 1] = 0;
+//    puts(str3);
+//}
+
+//int main() {
+//    char str1[20] = "First~";
+//    char str2[20] = "Second~";
+//
+//    char str3[20]="Simple num: ";
+//    char str4[20] = "1234567890";
+//
+//    strcat(str1, str2);
+//    puts(str1);
+//
+//    strncat(str3, str4, 7);
+//    puts(str3);
+//    return 0;
+//}
 
 //---------
 //int main() {
