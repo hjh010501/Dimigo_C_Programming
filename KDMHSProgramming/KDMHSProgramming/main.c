@@ -1208,6 +1208,292 @@
 //    return 0;
 //}
 
+// 2017.11.6(월)_프로그래밍
+//#include <stdio.h>
+//#include <math.h>
+//
+//struct point {
+//    int xpos;
+//    int ypos;
+//};
+//
+//int main() {
+//    struct point pos1, pos2;
+//    double distance;
+//
+//    printf("point1 pos: ");
+//    scanf("%d %d", &pos1.xpos, &pos1.ypos);
+//
+//    printf("point2 pos: ");
+//    scanf("%d %d", &pos2.xpos, &pos2.ypos);
+//
+//    distance = sqrt((double)(pos1.xpos - pos2.xpos) * (pos1.xpos - pos2.xpos) + (pos1.ypos - pos2.ypos) * (pos1.ypos - pos2.ypos));
+//
+//    printf("%g", distance);
+//
+//
+//}
+
+//#include <stdio.h>
+//#include <string.h>
+//
+//struct person {
+//    char name[20];
+//    char phoneNum[20];
+//    int age;
+//};
+//
+//int main() {
+//    struct person man1, man2;
+//    strcpy(man1.name, "안성준");
+//    strcpy(man1.phoneNum, "010-2343-1212");
+//    man1.age = 23;
+//
+//    printf("이름 입력: "); scanf("%s", man2.name);
+//    printf("번호 입력: "); scanf("%s", man2.phoneNum);
+//    printf("나이 입력: "); scanf("%d", &man2.age);
+//
+//    printf("이름: %s \n", man1.name);
+//    printf("번호: %s \n", man1.phoneNum);
+//    printf("나이: %d \n", man1.age);
+//
+//    printf("이름: %s \n", man2.name);
+//    printf("번호: %s \n", man2.phoneNum);
+//    printf("나이: %d \n", man2.age);
+//}
+
+//#include <stdio.h>
+//
+//struct point {
+//    int xpos;
+//    int ypos;
+//};
+//
+//struct person {
+//    char name[20];
+//    char phoneNum[20];
+//    int age;
+//};
+//
+//int main() {
+//    struct point pos = {10,20};
+//    struct person man = {"이승기", "010-1232-1212", 21};
+//    printf("%d %d\n", pos.xpos, pos.ypos);
+//    printf("%s %s %d \n", man.name, man.phoneNum, man.age);
+//}
+
+// 2017.11.7(화)_프로그래밍
+//
+//#include <stdio.h>
+//
+//struct point {
+//    int xpos;
+//    int ypos;
+//};
+//
+//int main() {
+//
+//    struct point arr[3];
+//    int i;
+//
+//    for(i=0;i<3;i++) {
+//        printf("점의 좌표 입력: ");
+//        scanf("%d %d", &arr[i].xpos, &arr[i].ypos);
+//    }
+//
+//    for(i=0;i<3;i++) {
+//        printf("[%d, %d] ",arr[i].xpos, arr[i].ypos);
+//    }
+//
+//    return 0;
+//
+//}
+
+//struct person {
+//    char name[20];
+//    char phoneNum[20];
+//    int age;
+//};
+//
+//int main() {
+//    struct person arr[3] = {
+//        {"이승기", "010-1212-0001", 21},
+//        {"정지영", "010-1313-0002", 22},
+//        {"한지수", "010-1717-0003", 19}
+//    };
+//
+//    int i;
+//    for (i = 0; i < 3; i++)
+//        printf("%s %s %d\n", arr[i].name, arr[i].phoneNum, arr[i].age);
+//
+//    return 0;
+//}
+
+//#include <stdio.h>
+//
+//struct point {
+//    int xpos;
+//    int ypos;
+//};
+//
+//int main() {
+//    struct point pos1 = {1,2};
+//    struct point pos2 = {100, 200};
+//    struct point * pptr = &pos1;
+//
+//    (*pptr).xpos += 4;
+//    (*pptr).ypos += 5;
+//
+//    printf("[%d, %d] \n", pptr->xpos, pptr->ypos);
+//
+//    pptr = &pos2;
+//    pptr->xpos += 1;
+//    pptr->ypos += 2;
+//    printf("[%d, %d] \n", (*pptr).xpos, (*pptr).ypos);
+//}
+
+// 2017.11.9(목)_프로그래밍
+//
+//#include <stdio.h>
+//
+//struct point {
+//    int xpos;
+//    int ypos;
+//};
+//
+//struct circle {
+//    double radius;
+//    struct point * center;
+//};
+//
+//int main() {
+//    struct point cen = {2, 7};
+//    double rad = 5.5;
+//
+//    struct circle ring = { rad, &cen};
+//    printf("원의 반지름: %g \n", ring.radius);
+//    printf("원의 중심: [%d, %d) \n", (ring.center)->xpos, (*(ring.center)).ypos);
+//
+//}
+//
+//#include <stdio.h>
+//
+//struct point {
+//    int xpos;
+//    int ypos;
+//    struct point * ptr;
+//};
+//
+//int main() {
+//    struct point pos1 = {1,1};
+//    struct point pos2 = {2,2};
+//    struct point pos3 = {3,3};
+//
+//    pos1.ptr =  &pos2;
+//    pos2.ptr =  &pos3;
+//    pos3.ptr =  &pos1;
+//
+//    printf("점의 연결관계...\n");
+//    printf("[%d, %d]와(과) [%d, %d] 연결\n", pos1.xpos, pos1.ypos,pos1.ptr->xpos, pos1.ptr->ypos);
+//    printf("[%d, %d]와(과) [%d, %d] 연결\n", pos2.xpos, pos2.ypos,pos2.ptr->xpos, pos2.ptr->ypos);
+//    printf("[%d, %d]와(과) [%d, %d] 연결\n", pos3.xpos, pos3.ypos,pos3.ptr->xpos, pos3.ptr->ypos);
+//}
+//#include <stdio.h>
+//
+//typedef int INT;
+//typedef int * PTR_INT;
+//
+//typedef unsigned int UINT;
+//typedef unsigned int * PTR_UINT;
+//
+//typedef unsigned char UCHAR;
+//typedef unsigned char * PTR_UCHAR;
+//
+//int main() {
+//    INT num1 = 20;
+//    PTR_INT pnum1 = &num1;
+//
+//    UINT num2 = 190;
+//    PTR_UINT pnum2 = &num2;
+//
+//    UCHAR ch = 'z';
+//    PTR_UCHAR pch = &ch;
+//
+//    printf("%d, %u, %c \n", *pnum1, *pnum2, *pch);
+//}
+
+// 2017.11.10(금)_프로그래밍
+// p.477 구조체 이름의 생략, 이름 생략하면 기존에 쓰던 방식이 안되기 때문에 다쓰는거 추천, 프로그래머의 프로그래밍 성향에 따라 다 다름
+
+//#include <stdio.h>
+//
+//struct point {
+//    int xpos;
+//    int ypos;
+//};
+//
+//typedef struct point Point;
+//
+//typedef struct person {
+//    char name[20];
+//    char phoneNum[20];
+//    int age;
+//} Person;
+//
+//int main() {
+//    Point pos = {10,20};
+//    Person man = {"이승기", "010-1212-0001", 21};
+//    printf("%d %d \n", pos.xpos, pos.ypos);
+//    printf("%s %s %d \n",  man.name, man.phoneNum, man.age);
+//}
+
+// p.478
+// 구조체 변수를 함수의 인자로 전달하거나 함수 내에서 return문을 통해서 구조체 변수를 반환하는 경우에 발생하는
+
+//#include <stdio.h>
+//
+//typedef struct point {
+//    int xpos;
+//    int ypos;
+//} Point;
+//
+//void ShowPosition(Point pos) {
+//    printf("[%d, %d] \n", pos.xpos, pos.ypos);
+//}
+//
+//Point GetCurrentPosition(void) {
+//    Point cen;
+//    printf("Input current pos: ");
+//    scanf("%d %d", &cen.xpos, &cen.ypos);
+//    return cen;
+//}
+//
+//int main() {
+//    Point curPos = GetCurrentPosition();
+//    ShowPosition(curPos);
+//}
+
+// p.479 그리고 구조체의 멤버로...
+
+// p.482 기본 자료형 변수를 대상으로는 사칙연산 비롯해서 비교연산 등 다양한 연산 가능, 하지만 구조체 변수는 매우 제한된 형태의 연산만 허용, 대입연산, &연산....등 알아두기
+
+#include <stdio.h>
+
+typedef struct point {
+    int xpos;
+    int ypos;
+} Point;
+
+int main() {
+    Point pos1 = {1,2};
+    Point pos2;
+    pos2 = pos1;
+    
+    printf("크기: %d \n", sizeof(pos1));
+    printf("[%d, %d] \n", pos1.xpos, pos1.ypos);
+    printf("크기: %d \n", sizeof(pos2));
+    printf("[%d, %d] \n", pos2.xpos, pos2.ypos);
+}
 //---------
 //int main() {
 //    int a = 10, b = 3;
