@@ -1477,22 +1477,97 @@
 
 // p.482 기본 자료형 변수를 대상으로는 사칙연산 비롯해서 비교연산 등 다양한 연산 가능, 하지만 구조체 변수는 매우 제한된 형태의 연산만 허용, 대입연산, &연산....등 알아두기
 
+//#include <stdio.h>
+//
+//typedef struct point {
+//    int xpos;
+//    int ypos;
+//} Point;
+//
+//int main() {
+//    Point pos1 = {1,2};
+//    Point pos2;
+//    pos2 = pos1;
+//
+//    printf("크기: %d \n", sizeof(pos1));
+//    printf("[%d, %d] \n", pos1.xpos, pos1.ypos);
+//    printf("크기: %d \n", sizeof(pos2));
+//    printf("[%d, %d] \n", pos2.xpos, pos2.ypos);
+//}
+
+// 2017.11.10(금)_프로그래밍
+// 23-1 그림 체크
+// p.497 체크
+
+//#include <stdio.h>
+////
+//tedef union ubox {
+//    int mem1;
+//    int mem2;
+//    double mem3;
+//} UBox;
+//
+//int main() {
+//
+//}
+
+//#include <stdio.h>
+//
+//typedef struct dbshort {
+//    unsigned short upper;
+//    unsigned short lower;
+//} DBShort;
+//
+//typedef union rdbuf {
+//    int iBuf;
+//    char bBuf[4];
+//    DBShort sBuf;
+//} RDBuf;
+//
+//int main() {
+//    RDBuf buf;
+//    printf("정수 입력: ");
+//    scanf("%d", &(buf.iBuf));
+//
+//    printf("상위 2바이트: %u \n", buf.sBuf.upper);
+//    printf("하위 2바이트: %u \n", buf.sBuf.lower);
+//    printf("상위 1바이트 아스키코드: %c \n", buf.bBuf[0]);
+//    printf("하위 1바이트 아스키코드: %c \n", buf.bBuf[3]);
+//}
+
 #include <stdio.h>
 
-typedef struct point {
-    int xpos;
-    int ypos;
-} Point;
+typedef enum syllable {
+    Do = 1, Re = 2, Mi = 3, Fa = 4, So = 5, La = 6, Ti = 7
+} Syllable;
+
+
+void Sound(Syllable sy) {
+    
+    switch (sy) {
+        case Do:
+            puts("도는 하얀 도라지"); return;
+        case Re:
+            puts("레는 하얀 도라지"); return;
+        case Mi:
+            puts("미는 하얀 도라지"); return;
+        case Fa:
+            puts("파는 하얀 도라지"); return;
+        case So:
+            puts("솔는 하얀 도라지"); return;
+        case La:
+            puts("라는 하얀 도라지"); return;
+        case Ti:
+            puts("시는 하얀 도라지"); return;
+    }
+    puts("다함께 노래 부르세~~");
+}
 
 int main() {
-    Point pos1 = {1,2};
-    Point pos2;
-    pos2 = pos1;
-    
-    printf("크기: %d \n", sizeof(pos1));
-    printf("[%d, %d] \n", pos1.xpos, pos1.ypos);
-    printf("크기: %d \n", sizeof(pos2));
-    printf("[%d, %d] \n", pos2.xpos, pos2.ypos);
+    Syllable tone;
+    for(tone = Do; tone<=Ti; tone+=1)
+        Sound(tone);
+    return 0;
 }
 //---------
 //int main() {
