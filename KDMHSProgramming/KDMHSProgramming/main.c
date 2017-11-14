@@ -1495,7 +1495,7 @@
 //    printf("[%d, %d] \n", pos2.xpos, pos2.ypos);
 //}
 
-// 2017.11.10(금)_프로그래밍
+// 2017.11.13(월)_프로그래밍
 // 23-1 그림 체크
 // p.497 체크
 
@@ -1535,39 +1535,80 @@
 //    printf("하위 1바이트 아스키코드: %c \n", buf.bBuf[3]);
 //}
 
+//#include <stdio.h>
+//
+//typedef enum syllable {
+//    Do = 1, Re = 2, Mi = 3, Fa = 4, So = 5, La = 6, Ti = 7
+//} Syllable;
+//
+//
+//void Sound(Syllable sy) {
+//
+//    switch (sy) {
+//        case Do:
+//            puts("도는 하얀 도라지"); return;
+//        case Re:
+//            puts("레는 하얀 도라지"); return;
+//        case Mi:
+//            puts("미는 하얀 도라지"); return;
+//        case Fa:
+//            puts("파는 하얀 도라지"); return;
+//        case So:
+//            puts("솔는 하얀 도라지"); return;
+//        case La:
+//            puts("라는 하얀 도라지"); return;
+//        case Ti:
+//            puts("시는 하얀 도라지"); return;
+//    }
+//    puts("다함께 노래 부르세~~");
+//}
+//
+//int main() {
+//    Syllable tone;
+//    for(tone = Do; tone<=Ti; tone+=1)
+//        Sound(tone);
+//    return 0;
+//}
+
+// 2017.11.14(화)_프로그래밍
+// < 개행이 \n 아니라고요? 별표 >, 운영체제마다 개행 문제가 달라 오류 발생, 하지만 텍스트모드와 바이너리 모드로 열면 잘 나옴
+// p.510, p.511 파일의 개방 모드 별표, p.513, p.514 rt, wt 체크(readtext, writetext) | rb 등은 다 바이너리
+// 텍스트모드는 저장할 때 개행같은거 잘 처리, 바이너리는 그대로 처리
+//#include <stdio.h>
+//
+//int main() {
+//    FILE * fp = fopen("data.txt", "wt");
+//    if (fp == NULL) {
+//        puts("파일 오픈 실퍠!");
+//        return -1;
+//    }
+//    fputc('A', fp);
+//    fputc('B', fp);
+//    fputc('C', fp);
+//    fclose(fp);
+//    return 0;
+//}
+
 #include <stdio.h>
 
-typedef enum syllable {
-    Do = 1, Re = 2, Mi = 3, Fa = 4, So = 5, La = 6, Ti = 7
-} Syllable;
-
-
-void Sound(Syllable sy) {
-    
-    switch (sy) {
-        case Do:
-            puts("도는 하얀 도라지"); return;
-        case Re:
-            puts("레는 하얀 도라지"); return;
-        case Mi:
-            puts("미는 하얀 도라지"); return;
-        case Fa:
-            puts("파는 하얀 도라지"); return;
-        case So:
-            puts("솔는 하얀 도라지"); return;
-        case La:
-            puts("라는 하얀 도라지"); return;
-        case Ti:
-            puts("시는 하얀 도라지"); return;
-    }
-    puts("다함께 노래 부르세~~");
-}
-
 int main() {
-    Syllable tone;
-    for(tone = Do; tone<=Ti; tone+=1)
-        Sound(tone);
+    
+    int ch, i;
+    
+    FILE * fp = fopen("data.txt", "rt");
+    
+    if(fp == NULL) {
+        puts("파일오픈 실패!");
+        return -1;
+    }
+    
+    for(i=0; i<3; i++) {
+        ch = fgetc(fp);
+        printf("%c \n", ch);
+    }
+    fclose(fp);
     return 0;
+    
 }
 //---------
 //int main() {
