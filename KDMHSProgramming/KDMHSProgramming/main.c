@@ -1588,28 +1588,104 @@
 //    fclose(fp);
 //    return 0;
 //}
+//
+//#include <stdio.h>
+//
+//int main() {
+//
+//    int ch, i;
+//
+//    FILE * fp = fopen("data.txt", "rt");
+//
+//    if(fp == NULL) {
+//        puts("파일오픈 실패!");
+//        return -1;
+//    }
+//
+//    for(i=0; i<3; i++) {
+//        ch = fgetc(fp);
+//        printf("%c \n", ch);
+//    }
+//    fclose(fp);
+//    return 0;
+//
+//}
 
+// 2017.11.16(목)_프로그래밍
+// p.514 개방 모드에 t 도 b 도 붙여주지 않으면 파일은 텍스트 모드로 개방되어짐 (줄치기)
+
+//#include <stdio.h>
+//
+//int main() {
+//    FILE * fp = fopen("simple.txt", "wt");
+//    if(fp==NULL) {
+//        puts("파일오픈 실패!");
+//        return -1;
+//    }
+//
+//    fputc('A', fp);
+//    fputc('B', fp);
+//    fputc('C', fp);
+//    fputs("My name is Hong\n", fp);
+//    fputs("Your name is Yoon\n", fp);
+//    fclose(fp);
+//    return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main() {
+//    char str[30];
+//    int ch;
+//    FILE * fp = fopen("simple.txt", "rt");
+//    if(fp == NULL) {
+//        puts("파일오픈 실패!");
+//        return -1;
+//    }
+//
+//    ch = fgetc(fp);
+//    printf("%c \n", ch);
+//    ch = fgetc(fp);
+//    printf("%c \n", ch);
+//
+//    fgets(str, sizeof(str), fp);
+//    printf("%s", str);
+//    fgets(str, sizeof(str), fp);
+//    printf("%s", str);
+//
+//    fclose(fp);
+//    return 0;
+//}
+
+// 2017.11.17(금)_프로그래밍
+// p.519 fread, fwrite 체크, sizeof 크기의 데이터
+// p.525 줄, p.526 코드 체크
+// p.529 그림 24-8 체크
 #include <stdio.h>
 
+typedef struct fren {
+    char name[10];
+    char sex;
+    int age;
+} Friend;
+
 int main() {
+    FILE * fp;
+    Friend myfren1;
+    Friend myfren2;
     
-    int ch, i;
-    
-    FILE * fp = fopen("data.txt", "rt");
-    
-    if(fp == NULL) {
-        puts("파일오픈 실패!");
-        return -1;
-    }
-    
-    for(i=0; i<3; i++) {
-        ch = fgetc(fp);
-        printf("%c \n", ch);
-    }
+    fp=fopen("friend.bin", "wb");
+    printf("이름, 성별, 나이 순 입력: ");
+    scanf("%s %c %d", myfren1.name, &(myfren1.sex), &(myfren1.age));
+    fwrite((void*)&myfren1, sizeof(myfren1),1,fp);
     fclose(fp);
-    return 0;
     
+    fp=fopen("friend.bin", "rb");
+    fread((void*)&myfren2, sizeof(myfren2), 1, fp);
+    printf("%s %c %d \n", myfren2.name, myfren2.sex, myfren2.age);
 }
+
+
 //---------
 //int main() {
 //    int a = 10, b = 3;
