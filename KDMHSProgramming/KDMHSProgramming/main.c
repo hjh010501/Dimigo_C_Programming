@@ -7,15 +7,16 @@
 //
 
 /*8월 24일 수업*/
+//
+//#include <stdio.h>
+// int main()
+// {
+// int ninput = 0, bResult = 0;
+// scanf("%d", &ninput);
+// bResult = ninput < 4 || ninput >= 60;
+// printf("Result:%d(1:True,0:False)\n", bResult);
+// }
 
-/*#include <stdio.h>
- int main()
- {
- int ninput = 0, bResult = 0;
- scanf("%d", &ninput);
- bResult = ninput < 4 || ninput >= 60;
- printf("Result:%d(1:True,0:False)\n", bResult);
- }*/
 /*#include <stdio.h>
  int main()
  {
@@ -66,182 +67,211 @@
  
  
  }*/
-/*#include <stdio.h>
- int main()
- {
- char ch = 9;
- int inum = 1052;
- double dnum = 3.1415;
- printf("변수 ch의 크기: %d\n", sizeof ch);
- printf("변수 ch의 크기: %d\n", sizeof(inum));
- printf("변수 ch의 크기: %d\n", sizeof(dnum));//size of다음에 괄호 넣어도 되고 안넣어도 됨: 이유: 연산자이기때문에-size of가/ 함수는 필요/띄어쓰기 있는 것은 꼭 해야됨
- 
- printf("char의 크기 : %d \n", sizeof(char));
- printf("char의 크기 : %d \n", sizeof(int ));
- printf("long의 크기 : %d \n", sizeof(long ));
- printf("long long의 크기 : %d \n\n", sizeof(long long ));
- 
- printf("floar의 크기 : %d \n", sizeof(float));
- printf("double의 크기 : %d \n", sizeof(double));
- }*/
-/*#include <stdio.h>
- int main()
- {
- double num1 = 245;
- int num2 = 3.1415;
- int num3 = 129;
- char ch = num3;
- 
- printf("정수 245를 실수로: %f \n", num1);
- printf("실수 3.1415를 정수로: %d \n", num2);
- printf("큰 정수 129를 작은 정수로: %d \n", ch);
- 
- }*/
+
+//#include <stdio.h>
+// int main()
+// {
+// char ch = 9;
+// int inum = 1052;
+// double dnum = 3.1415;
+// printf("변수 ch의 크기: %d\n", sizeof ch);
+// printf("변수 ch의 크기: %d\n", sizeof(inum));
+// printf("변수 ch의 크기: %d\n", sizeof(dnum));//size of다음에 괄호 넣어도 되고 안넣어도 됨: 이유: 연산자이기때문에-size of가/ 함수는 필요/띄어쓰기 있는 것은 꼭 해야됨
+//
+// printf("char의 크기 : %d \n", sizeof(char));
+// printf("char의 크기 : %d \n", sizeof(int ));
+// printf("long의 크기 : %d \n", sizeof(long ));
+// printf("long long의 크기 : %d \n\n", sizeof(long long ));
+//
+// printf("floar의 크기 : %d \n", sizeof(float));
+// printf("double의 크기 : %d \n", sizeof(double));
+// }
+
+//#include <stdio.h>
+// int main()
+// {
+// double num1 = 245;
+// int num2 = 3.1415;
+// int num3 = 129;
+// char ch = num3;
+//
+// printf("정수 245를 실수로: %f \n", num1);
+// printf("실수 3.1415를 정수로: %d \n", num2);
+// printf("큰 정수 129를 작은 정수로: %d \n", ch);
+//
+// }
+
 //8월 28일 수업
-/*#include <stdio.h>
- int main()
- {
- printf("%-8s %14s %5s \n", "이  름", "전공학과", "학년");
- printf("%-8s %14s %5s \n", "김동수", "전자공학", "3");
- printf("%-8s %14s %5s \n", "이올수", "컴퓨터공학", "2");
- printf("%-8s %14s %5s \n", "한선영", "미술교육학", "4");
- }*/
-/*#include <stdio.h>
- int main()
- {
- float num1;
- double num2;
- long double num3;
- 
- printf("실수 입력1(e 표기법): ");
- scanf("%f", &num1);
- printf("입력된 실수 %f \n", num1);
- 
- printf("실수 입력2(e 표기법): ");
- scanf("%lf", &num2);
- printf("입력된 실수 %f \n", num2);
- 
- printf("실수 입력3(e 표기법): ");
- scanf("%Lf", &num3);
- printf("입력된 실수 %Lf \n", num3);
- 
- 
- }*/
-/*#include <stdio.h>
- int main()
- {
- char ch = 0;
- ch = getchar();
- putchar(ch);
- putchar('Z');
- }*/
-/*#include <stdio.h>
- #include <conio.h>
- int main() {
- char ch = 0;
- printf("아무 키나 누르면 다음으로 넘어갑니다.\n");
- ch = _getch();
- 
- printf("입력한 키는 ");
- putchar(ch);
- printf("입니다.\n");
- }*/
+//#include <stdio.h>
+// int main()
+// {
+// printf("%-8s %14s %5s \n", "이  름", "전공학과", "학년");
+// printf("%-8s %14s %5s \n", "김동수", "전자공학", "3");
+// printf("%-8s %14s %5s \n", "이올수", "컴퓨터공학", "2");
+// printf("%-8s %14s %5s \n", "한선영", "미술교육학", "4");
+// }
+
+//#include <stdio.h>
+// int main()
+// {
+// float num1;
+// double num2;
+// long double num3;
+//
+// printf("실수 입력1(e 표기법): ");
+// scanf("%f", &num1);
+// printf("입력된 실수 %f \n", num1);
+//
+// printf("실수 입력2(e 표기법): ");
+// scanf("%lf", &num2);
+// printf("입력된 실수 %f \n", num2);
+//
+// printf("실수 입력3(e 표기법): ");
+// scanf("%Lf", &num3);
+// printf("입력된 실수 %Lf \n", num3);
+//
+// }
+
+//#include <stdio.h>
+// int main()
+// {
+// char ch = 0;
+// ch = getchar();
+// putchar(ch);
+// putchar('Z');
+// }
+
+
+
+
+
+
+//Window only
+//////////////////////////////////////////////////////////////////////??*****
+//#include <stdio.h>
+// int main() {
+// char ch = 0;
+// printf("아무 키나 누르면 다음으로 넘어갑니다.\n");
+// ch = _getch();
+//
+// printf("입력한 키는 ");
+// putchar(ch);
+// printf("입니다.\n");
+// }
+
+
+
+
+
+
+
+
+
+
+
+
 //8월 29일 수업
-/*#include <stdio.h>
- int main() {
- int num = 0;
- while (num < 5) {
- printf("Hello world! %d \n",num);
- num++;
- }
- }*/
-/*#include <stdio.h>
- int main()
- {
- char ch = 0;
- while ((ch = getchar()) != '\n')//개행이 들어올때(enter칠때) 까지 다 받아서 내보냄
- {
- putchar(ch);//char은 한 글자씩 받지만 여러 글자쓰고 엔터치면 모두다 써짐-이유: 버퍼(사용자가 입력했을때 임시적으로 저장했다가 내보내는 공간)- 다 쓰면 알아서 하나씩 나옴=즉, 버퍼에 의해
- }
- }*/
+
+//#include <stdio.h>
+// int main() {
+// int num = 0;
+// while (num < 5) {
+// printf("Hello world! %d \n",num);
+// num++;
+// }
+// }
+//
+//#include <stdio.h>
+// int main()
+// {
+// char ch = 0;
+// while ((ch = getchar()) != '\n')//개행이 들어올때(enter칠때) 까지 다 받아서 내보냄
+// {
+// putchar(ch);//char은 한 글자씩 받지만 여러 글자쓰고 엔터치면 모두다 써짐-이유: 버퍼(사용자가 입력했을때 임시적으로 저장했다가 내보내는 공간)- 다 쓰면 알아서 하나씩 나옴=즉, 버퍼에 의해
+// }
+// }
+
 //8월 31일 수업
-/*#include <stdio.h>
- int main()//0 입력할때까지 실행후 합 - 한번은 실행 후 반복(do while 문 특징)
- {
- int total = 0, num = 0;
- do
- {
- printf("정수 입력 (0 to quit) : ");
- scanf("%d", &num);
- total += num;//total = total +num;
- } while (num != 0);
- printf("합계 : %d \n", total);
- 
- }*/
-/*#include <stdio.h>
- int main()
- {
- int num = 0, total = 0;
- do
- {
- num++;
- if (num % 2 == 0) {
- total += num;
- }
- }
- while (num >= 0 && num <= 100);
- printf("합계: %d \n", total);
- }
- */
-/*#include <stdio.h>
- int main()
- {
- int cur = 2;
- int is = 0;
- do
- {
- is = 1;
- 
- while (is < 10)
- {
- printf("%d * %d = %d \n", cur, is, cur*is);
- 
- is++;
- }
- cur++;
- 
- } while (cur < 10);
- }*/
-/*#include <stdio.h>
- int main()
- {
- int total = 0;
- int i, num;
- printf("0부터 num까지의 덧셈 , num은? ");
- scanf("%d", &num);
- 
- for (i = 0; i < num + 1; i++)
- {
- total += i;
- printf("0부터 %d까지 덧셈결과: %d \n", num, total);
- }
- }
- */
-/*#include <stdio.h>
- int main()
- {
- double total = 0.0;
- double input = 0.0;
- int num = 0;
- for ( ; input >= 0.0; ) {
- total += input;
- printf(" 실수 입력(minus to quit) : ");
- scanf("%lf", &input);
- num++;
- 
- }
- printf("평균: %lf \n", total / (num - 1));
- }*/
+//#include <stdio.h>
+// int main()//0 입력할때까지 실행후 합 - 한번은 실행 후 반복(do while 문 특징)
+// {
+// int total = 0, num = 0;
+// do
+// {
+// printf("정수 입력 (0 to quit) : ");
+// scanf("%d", &num);
+// total += num;//total = total +num;
+// } while (num != 0);
+// printf("합계 : %d \n", total);
+//
+// }
+
+//#include <stdio.h>
+// int main()
+// {
+// int num = 0, total = 0;
+// do
+// {
+// num++;
+// if (num % 2 == 0) {
+// total += num;
+// }
+// }
+// while (num >= 0 && num <= 100);
+// printf("합계: %d \n", total);
+// }
+
+//#include <stdio.h>
+// int main()
+// {
+// int cur = 2;
+// int is = 0;
+// do
+// {
+// is = 1;
+//
+// while (is < 10)
+// {
+// printf("%d * %d = %d \n", cur, is, cur*is);
+//
+// is++;
+// }
+// cur++;
+//
+// } while (cur < 10);
+// }
+
+//#include <stdio.h>
+// int main()
+// {
+// int total = 0;
+// int i, num;
+// printf("0부터 num까지의 덧셈 , num은? ");
+// scanf("%d", &num);
+//
+// for (i = 0; i < num + 1; i++)
+// {
+// total += i;
+// printf("0부터 %d까지 덧셈결과: %d \n", i, total);
+// }
+// }
+
+
+//#include <stdio.h>
+// int main()
+// {
+// double total = 0.0;
+// double input = 0.0;
+// int num = 0;
+// for ( ; input >= 0.0; ) {
+// total += input;
+// printf(" 실수 입력(minus to quit) : ");
+// scanf("%lf", &input);
+// num++;
+//
+// }
+// printf("평균: %lf \n", total / (num - 1));
+// }
 
 
 /*#include <stdio.h>
@@ -256,6 +286,7 @@
  printf("\n");
  }
  }*/
+
 /*#include <stdio.h>
  int main()
  {
@@ -500,24 +531,27 @@
  printf("main num: %d \n", num);
  return 0;//main의 num 유효한 마지막 문장
  }*/
+
+
 //9월 15일 수업
-/*#include <stdio.h>
- void Add(int val);
- int num;//전역변수는 기본 0으로 초기화됨
- 
- int main(void)
- {
- printf("num: %d \n", num);
- Add(3);
- printf("num : %d \n", num);
- num++;//전역변수 num의 값 1 증가
- printf("num : %d \n", num);
- }
- 
- void Add(int val)
- {
- num += val;//전역변수 num의 값 val만큼 증가
- }*/
+
+//#include <stdio.h>
+// void Add(int val);
+// int num;//전역변수는 기본 0으로 초기화됨
+//
+// int main(void)
+// {
+// printf("num: %d \n", num);
+// Add(3);
+// printf("num : %d \n", num);
+// num++;//전역변수 num의 값 1 증가
+// printf("num : %d \n", num);
+// }
+//
+// void Add(int val)
+// {
+// num += val;//전역변수 num의 값 val만큼 증가
+// }
 
 /*#include <stdio.h>
  
@@ -597,31 +631,32 @@
  }
  }
  }*/
-//p.248 3번 문제!!!! 다시 풀기 ㅜㅜ
-/*#include <stdio.h>
- 
- int GCM(int num1, int num2);
- 
- int main()
- {
- int num1, num2;
- 
- printf("두 개의 정수를 입력하시오: ");
- scanf("%d %d", &num1, &num2);
- 
- printf("GCM: %d", GCM(num1, num2));
- return 0;
- 
- }
- 
- int GCM(int num1, int num2) {
- int result;
- result = num1;
- while (num1%result != 0 || num2%result != 0)
- result--;
- return result;
- }
- */
+//p.248 3번 문제!!!! 다시 풀기ㅜㅜ
+
+//#include <stdio.h>
+//
+// int GCM(int num1, int num2);
+//
+// int main()
+// {
+// int num1, num2;
+//
+// printf("두 개의 정수를 입력하시오: ");
+// scanf("%d %d", &num1, &num2);
+//
+// printf("GCM: %d", GCM(num1, num2));
+// return 0;
+//
+// }
+//
+// int GCM(int num1, int num2) {
+// int result;
+// result = num1;
+// while (num1%result != 0 || num2%result != 0)
+// result--;
+// return result;
+// }
+
 //4번문제
 /*#include <stdio.h>
  int main()
@@ -731,9 +766,6 @@
  //return 1;
  //else return Power(n - 1) * 2;
  
- 
- 
- 
  }
  
  int main()
@@ -764,58 +796,58 @@
  printf("배열요소에 저장된 값의 합: %d \n", sum);
  }
  */
-/*#include <stdio.h>
- int main()
- {
- int arr1[5] = { 1,2,3,4,5 };
- int arr2[] = { 1,2,3,4,5,6,7 };
- int arr3[5] = { 1,2 };
- int ar1Len, ar2Len, ar3Len,i;
- 
- printf("배열 arr1 의 크기: %d \n", sizeof(arr1));
- printf("배열 arr2 의 크기: %d \n", sizeof(arr2));
- printf("배열 arr3 의 크기: %d \n", sizeof(arr3));
- 
- ar1Len = sizeof(arr1) / sizeof(int);//배열 arr1 의 길이 계산
- 
- ar2Len = sizeof(arr2) / sizeof(int);//배열 arr2 의 길이 계산
- 
- 
- ar3Len = sizeof(arr3) / sizeof(int);//배열 arr3 의 길이 계산
- 
- 
- for (i = 0; i < ar1Len; i++)
- printf("%d", arr1[i]);
- printf("\n");
- 
- for (i = 0; i < ar2Len; i++)
- printf("%d", arr2[i]);
- printf("\n");
- 
- for(i = 0; i < ar3Len; i++)
- printf("%d", arr3[i]);
- printf("\n");
- 
- }*/
-//문장 쓸때 ch로 하나씩 넣는데 마지막에 null문자 넣어서 원래 갯수+1
-/*#include <stdio.h>
- int main()
- {
- int a[5] = { 30,40,10,50,20 };
- char b[6] = { 'H','e','l','l','o','\0' };
- char c[] = { "Hello" };
- char *d = "Hello";
- 
- for (int i = 0; i < 5; i++) {
- printf("%d ", a[i]);
- }
- printf("\n");
- puts(b);
- puts(c);
- puts(d);
- }
- */
 
+//#include <stdio.h>
+// int main()
+// {
+// int arr1[5] = { 1,2,3,4,5 };
+// int arr2[] = { 1,2,3,4,5,6,7 };
+// int arr3[5] = { 1,2 };
+// int ar1Len, ar2Len, ar3Len,i;
+//
+// printf("배열 arr1 의 크기: %d \n", sizeof(arr1));
+// printf("배열 arr2 의 크기: %d \n", sizeof(arr2));
+// printf("배열 arr3 의 크기: %d \n", sizeof(arr3));
+//
+// ar1Len = sizeof(arr1) / sizeof(int);//배열 arr1 의 길이 계산
+//
+// ar2Len = sizeof(arr2) / sizeof(int);//배열 arr2 의 길이 계산
+//
+//
+// ar3Len = sizeof(arr3) / sizeof(int);//배열 arr3 의 길이 계산
+//
+//
+// for (i = 0; i < ar1Len; i++)
+// printf("%d", arr1[i]);
+// printf("\n");
+//
+// for (i = 0; i < ar2Len; i++)
+// printf("%d", arr2[i]);
+// printf("\n");
+//
+// for(i = 0; i < ar3Len; i++)
+// printf("%d", arr3[i]);
+// printf("\n");
+//
+// }
+
+//문장 쓸때 ch로 하나씩 넣는데 마지막에 null문자 넣어서 원래 갯수+1
+//#include <stdio.h>
+// int main()
+// {
+// int a[5] = { 30,40,10,50,20 };
+// char b[6] = { 'H','e','l','l','o','\0' };
+// char c[] = { "Hello" };
+// char *d = "Hello";
+//
+// for (int i = 0; i < 5; i++) {
+// printf("%d ", a[i]);
+// }
+// printf("\n");
+// puts(b);
+// puts(c);
+// puts(d);
+// }
 
 //int main() {
 //    int x = 10;
@@ -840,14 +872,15 @@
 //    int * pnum;
 //
 //    pnum = &num1;
-//    (*pnum) += 30;
+//    *pnum += 30;
 //    pnum = &num2;
-//    (*pnum) -= 30;
+//    *pnum -= 30;
 //
 //    printf("num1:%d, num2:%d\n", num1, num2);
 //    return 0;
 //
 //}
+
 //#include <stdio.h>
 //
 //int main() {
@@ -865,7 +898,7 @@
 //
 //int main() {
 //    int arr[3] = {15,25,35};
-//    int * ptr = &arr[0];
+//    int * ptr = arr;
 //
 //    printf("%d %d \n", ptr[0], arr[0]);
 //    printf("%d %d \n", ptr[1], arr[1]);
@@ -1028,9 +1061,9 @@
 //    SwapIntPtr(&ptr1, &ptr2);
 //    printf("*ptr1, *ptr2: %d %d \n", *ptr1, *ptr2);
 //}
-//
-//#include <stdio.h>
 
+//#include <stdio.h>
+//
 //int main() {
 //    int num1 = 10, num2 = 20, num3 = 30;
 //    int *ptr1 = &num1;
@@ -1329,6 +1362,25 @@
 //    return 0;
 //}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //#include <stdio.h>
 //
 //struct point {
@@ -1352,6 +1404,21 @@
 //    printf("[%d, %d] \n", (*pptr).xpos, (*pptr).ypos);
 //}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 2017.11.9(목)_프로그래밍
 //
 //#include <stdio.h>
@@ -1372,7 +1439,7 @@
 //
 //    struct circle ring = { rad, &cen};
 //    printf("원의 반지름: %g \n", ring.radius);
-//    printf("원의 중심: [%d, %d) \n", (ring.center)->xpos, (*(ring.center)).ypos);
+//    printf("원의 중심: [%d, %d] \n", (ring.center)->xpos, (*(ring.center)).ypos);
 //
 //}
 //
@@ -1498,18 +1565,6 @@
 // 2017.11.13(월)_프로그래밍
 // 23-1 그림 체크
 // p.497 체크
-
-//#include <stdio.h>
-////
-//tedef union ubox {
-//    int mem1;
-//    int mem2;
-//    double mem3;
-//} UBox;
-//
-//int main() {
-//
-//}
 
 //#include <stdio.h>
 //
@@ -1647,6 +1702,9 @@
 //    printf("%c \n", ch);
 //    ch = fgetc(fp);
 //    printf("%c \n", ch);
+//    ch = fgetc(fp);
+//    printf("%c \n", ch);
+//
 //
 //    fgets(str, sizeof(str), fp);
 //    printf("%s", str);
@@ -1661,29 +1719,29 @@
 // p.519 fread, fwrite 체크, sizeof 크기의 데이터
 // p.525 줄, p.526 코드 체크
 // p.529 그림 24-8 체크
-#include <stdio.h>
+//#include <stdio.h>
+//
+//typedef struct fren {
+//    char name[10];
+//    char sex;
+//    int age;
+//} Friend;
+//
+//int main() {
+//    FILE * fp;
+//    Friend myfren1;
+//    Friend myfren2;
+//
+//    fp=fopen("friend.bin", "wb");
+//    printf("이름, 성별, 나이 순 입력: ");
+//    scanf("%s %c %d", myfren1.name, &(myfren1.sex), &(myfren1.age));
+//    fwrite((void*)&myfren1, sizeof(myfren1),1,fp);
+//    fclose(fp);
+//
+//    fp=fopen("friend.bin", "rb");
+//    fread((void*)&myfren2, sizeof(myfren2), 1, fp);
+//    printf("%s %c %d \n", myfren2.name, myfren2.sex, myfren2.age);
 
-typedef struct fren {
-    char name[10];
-    char sex;
-    int age;
-} Friend;
-
-int main() {
-    FILE * fp;
-    Friend myfren1;
-    Friend myfren2;
-    
-    fp=fopen("friend.bin", "wb");
-    printf("이름, 성별, 나이 순 입력: ");
-    scanf("%s %c %d", myfren1.name, &(myfren1.sex), &(myfren1.age));
-    fwrite((void*)&myfren1, sizeof(myfren1),1,fp);
-    fclose(fp);
-    
-    fp=fopen("friend.bin", "rb");
-    fread((void*)&myfren2, sizeof(myfren2), 1, fp);
-    printf("%s %c %d \n", myfren2.name, myfren2.sex, myfren2.age);
-}
 
 
 //---------
